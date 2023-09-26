@@ -1,0 +1,132 @@
+#root{
+  background-color: rgb(221, 221, 221);
+}
+#root > div{
+  margin: 1rem auto;
+}
+
+h1{
+  text-align: center;
+}
+.personalInfoContainer,.profileSummaryContainer,.educationalInfoContainer,.experienceInfoContainer,.skillsInfoContainer,.projectInfoContainer{
+  border: solid 1px black;
+  border-radius: .8rem;
+  padding: 2rem;
+  width: clamp(600px,800px,80%);
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0px 5px 3px 2px rgb(120, 120, 120);
+}
+.personalInfoContainer > section > div{
+  display: flex;
+  gap: 1rem;
+  /* padding: .5rem; */
+}
+.personalInfoContainer > section > div > * {
+  flex: 1;
+}
+label{
+  display: block;
+  padding: .25rem 0 .8rem 0;
+}
+.nameContainer label{
+display: block;
+}
+/*  */
+.profileContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+/*  */
+.educationalInfoContainer section > div,.experienceInfoContainer section > div{
+  display: flex;
+  gap: 1rem;
+
+}
+.educationalInfoContainer section > div > *,.experienceInfoContainer section > div > *{
+  flex: 1;
+}
+.designationDetails{
+  flex-direction: column;
+}
+/*  */
+.skillsInfoContainer{
+  display: block;
+}
+/*  */
+.projectNameContainer{
+  display: flex;
+  gap: 1rem;
+}
+.projectNameContainer > div{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.projectInfoContainer > section{
+  display: flex;
+  gap: 1rem;
+
+  flex-direction: column;
+}
+.projectInfoContainer > section > *{
+  flex: 1;
+}
+textarea,input{
+  width: 100%;
+  font-family:'Calibri',sans-serif;
+  padding: .5rem;
+  resize: vertical;
+}
+
+.imagelabel{
+  border: 1px solid rgb(144, 144, 144);
+  display: inline-block;
+  cursor: pointer;
+  height: 2.1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button{
+  width: 100%;
+  padding: .5rem;
+  margin: .5rem 0;
+}
+hr{
+  margin: 1rem 0;
+}
+.close-btn,.print-btn{
+  width: max(50%,100px);
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+}
+textarea{
+  font-size: .9rem;
+}
+footer{
+  display: flex;
+  justify-content: center;
+}
+@media  screen and (max-width:450px) {
+.educationalInfoContainer section > div,.experienceInfoContainer section > div,
+  .personalInfoContainer > section > div{
+    display: block;
+  }
+.personalInfoContainer,.profileSummaryContainer,.educationalInfoContainer,.experienceInfoContainer,.skillsInfoContainer,.projectInfoContainer{
+  width: 100%;
+  padding: 1rem;
+}
+
+.projectNameContainer{
+  display: block;
+}
+.previewContainer{
+  width: 100%;
+  padding: 1rem;
+}
+}

@@ -1,0 +1,156 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+body{
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+}
+/* Preview Related Styles */
+#root{
+  height: 100vh;
+  padding: 1rem;
+  overflow: scroll;
+}
+#root .previewWrapper{
+  margin: 0;
+}
+
+.previewWrapper{
+  font-family: sans-serif;
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  background-color: rgba(18, 18, 18, 0.2);
+}
+.previewContainer{
+  background-color: white;
+  padding: 2rem;
+  width: 800px;
+  border: 1px solid;
+}
+
+button{
+  padding: 0 0.5rem;
+}
+.fullName{
+  display: flex;
+  gap:0.5rem
+}
+
+.previewWrapper ~ *{
+  pointer-events: none;
+}
+/* Preview Section */
+.previewContainer{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  line-height: 1.2;
+}
+/*  */
+.personalPreview{
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+/*  */
+.profileSummaryPreview{
+  line-height: 1.4;
+}
+.previewContainer h2{
+  text-align: center;
+  text-decoration: underline;
+}
+.profileSummaryPreview > p{
+  text-align: justify;
+}
+/*  */
+.educationalPreview > div {
+  margin-bottom: .5rem;
+}
+.educationNameDate,.designationDate{
+  display: flex;
+  justify-content: space-between;
+}
+/*  */
+.skillsPreview  li{
+  line-height: 1.5;
+}
+/*  */
+.projectPreview > dl{
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+dt{
+  text-decoration: underline;
+}
+/*  */
+.previewContainer textarea{
+  background-color: transparent;
+  resize: vertical;
+}
+.personal-right{
+  padding-right: 1rem;
+}
+img{
+  width: 75px;
+}
+.previewContainer h1{
+  font-size: 20pt;
+  font-weight: 500;
+}
+.previewContainer h2{
+  font-size: 16pt;
+  font-weight: 500;
+
+}
+.previewContainer h3,.previewContainer h4,.previewContainer a{
+  font-size: 12pt;
+  font-weight: 500;
+
+}
+.previewContainer p{
+  font-size: 11pt;
+
+}
+.previewContainer dt{
+  font-size: 12.5pt;
+  text-decoration: underline;
+}
+.previewContainer hr{
+  margin: initial;
+}
+a{
+  color:rgb(0, 0, 105)
+}
+i{
+  padding-left: .2rem;
+}
+
+@media print {
+  .previewWrapper{
+    word-wrap: break-word;
+    border: none;
+  }
+  .previewContainer{
+      width: 100%;
+      padding: 3rem;
+      padding-bottom: 0;
+  }
+  .previewContainer textarea{
+    visibility: hidden;
+  }
+  .personalInfoContainer,button{
+      display:none!important;
+  }
+  @page {
+      size:A4;
+      margin: 0;
+  }
+  @page :first {
+    margin-top: 0; /* Remove top margin on the first page */
+  }
+}
